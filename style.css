@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+}
+
+/*  рассылка  */
+
+.subscribe{
+    background-color: #00acee;
+    padding: 20px;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span{
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+input{
+    font-family: 'Comfortaa', cursive;
+    color: #00acee;
+    font-weight: 600;
+}
+
+input:focus{
+    background-color: #e3f1fc;
+}
+
+.subscribeP{
+    color: #e3f1fc;
+}
+
+/*  шапка  */
+
+header{
+    display: flex;
+    padding: 20px;
+}
+
+.logo{
+    max-width: 300px;
+    max-height: 62px;
+    transition: transform 1s;
+}
+
+.logo{
+    max-width: 300px;
+    max-height: 62px;
+    transition: transform 1s;
+   
+    animation: flip 2s 1;
+}
+
+
+
+.logo:active{
+    transform: rotate(360deg);
+    transition: transform 1s;
+}
+
+
+nav{
+    margin-right: 10%;
+    font-size: 24px;
+}
+
+ul{
+    display: flex;
+}
+
+li{
+    list-style: none;
+    margin-right: 20px;
+}
+
+li:first-child:hover{
+    animation: move1 2s infinite;
+   }
+
+li:nth-child(2n):hover{
+    animation: move2 2s infinite;
+   }
+   
+li:last-child:hover{
+    animation: move3 2s 1;
+}
+
+@keyframes move1 {
+    0%   { transform: rotate(180deg);}
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1);}
+   }
+
+@keyframes move2 {
+    0% {transform: rotate(180deg);}
+    25%{transform: scaleX(2);}
+    50%{transform: scaleY(2);}
+    75%{transform: scaleX(1);}
+    100%{transform: scaleY(1);}
+   }   
+
+@keyframes move3 {
+    0%{transform:rotate(180deg) ;}
+    25%{background-color: rgb(0, 255, 255)}
+    50%{background-color: #ff5311}
+    75%{transform:scale(2);}
+    100%{transform: scale(1);}
+    }  
+
+.menu{
+    text-decoration: none;
+    color: #00acee ;
+}
+
+.menu:visited{
+    color:#777777;
+}
+
+/*  main  */
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.img:hover{
+    width:100%;
+}
+
+
+
+.line{
+    width: 55%;
+    height: 2px;
+    background-color: #00acee ;
+}
+
+article{
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card1{
+    width:20%;
+    transition: transform 2s;
+    border: 5px inset #00acee;
+    padding: 20px;
+    animation: moveCard 10s 1;
+    animation-timing-function: ease-in-out;
+}
+
+.card2{
+    width:20%;
+    transition: transform 2s;
+    border: 5px inset #00acee;
+    padding: 20px;
+    animation: zoomInRight 2s 1;
+    animation-timing-function: ease-out;
+}
+   
+   @keyframes moveCard{
+    0%  {scale: 0;}
+    25% {scale: 2;}
+    50%{rotate: 180deg;}
+    75%{scale: 1.5;}
+    100%{scale: 1;}
+   }
+
+.img{
+    width: 100%;
+    transition: transform 2s;
+}
+
+.text{
+    background-color:#00acee ;
+    color:white;
+    max-width: 100%;
+    padding: 15px;
+}
+
+.text::first-letter{
+    color:#ff5311;
+    font-size:24px;
+}
+
+.PS5{
+    width: 200px;
+    height: 300px;
+    padding:5px;
+    background-image: url(images/реклама.jpg);
+    background-size: cover;
+
+    position: absolute;
+    right:0;
+    bottom: 0;
+    animation: advMove 3s 1;
+
+    animation-timing-function: ease-in;
+}
+
+h2{
+    font-size: 20px;
+}
+
+@keyframes advMove{
+    0%   { right: -200vw;}
+    100% { right: 0;}
+}
+
+/*  footer  */
+
+footer{
+    background-color: rgb(233, 233, 233);
+    color:#777777;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.group{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footerA1{
+    color: #ff5311;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.one:hover{
+    color:#777777;
+}
+
+.two:hover{
+    color:#777777;
+}
+
+.three:hover{
+    color:#777777;
+}
+
+.footerA{
+    color:#00acee ;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.footerP{
+    margin-left: 30px;
+}
